@@ -34,7 +34,6 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 import dev.virunarala.gweiland.R
 import dev.virunarala.gweiland.common.model.NetworkResult
 import dev.virunarala.gweiland.home.data.model.ListingUiModel
-import timber.log.Timber
 
 @Composable
 fun HomeScreen(
@@ -118,20 +117,21 @@ fun HomeScreen(
 
 
                 if(listingsState.value is NetworkResult.Success<*>) {
-                    Timber.i("Success")
                     val latestListings = ((listingsState.value) as NetworkResult.Success<*>).data as List<ListingUiModel>
-                    Timber.i("Data: $latestListings")
+
+                    TopListingBanner(
+                        listing = latestListings[0],
+                        modifier = Modifier
+                            .padding(
+                                top = dimensionResource(id = R.dimen.padding_medium),
+                                bottom = dimensionResource(id = R.dimen.padding_medium)
+                            )
+                    )
+
                     LazyColumn {
 
                         item {
-                            TopListingBanner(
-                                listing = latestListings[0],
-                                modifier = Modifier
-                                    .padding(
-                                        top = dimensionResource(id = R.dimen.padding_medium),
-                                        bottom = dimensionResource(id = R.dimen.padding_medium)
-                                    )
-                            )
+
                         }
 
                         items(latestListings) {
@@ -144,7 +144,6 @@ fun HomeScreen(
             }
 
         if(listingsState.value is NetworkResult.Loading) {
-            Timber.i("Loading...")
             LottieAnimation(
                 composition = composition,
                 progress = { animationProgress },
