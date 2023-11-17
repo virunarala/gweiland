@@ -8,5 +8,5 @@ A cryptocurrency made as as take-home assignment for Gweiland
 1. Clone and open this project in the latest version of Android Studio
 2. In Project view, create a Resource Bundle with the name 'apikey' at the root of the project
 3. Add the following content to apikey.properties file:
-   BASE_URL="<CoinMarketCap API base url>"
-   API_KEY="<CoinMarketCap API Key>" 
+   BASE_URL="{CoinMarketCap API base url}"
+   API_KEY="{CoinMarketCap API Key}" 
