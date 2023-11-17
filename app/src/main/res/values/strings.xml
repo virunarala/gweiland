@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Gweiland</string>
+    <string name="growth">Growth</string>
+    <string name="fall">Fall</string>
+    <string name="money_shop">$ Shop</string>
+    <string name="exchange">Exchange</string>
+    <string name="exchanges">Exchanges</string>
+    <string name="metaverse">Metaverse</string>
+    <string name="launchpads">Launchpads</string>
+    <string name="wallet">Wallet</string>
+    <string name="notifications">Notifications</string>
+    <string name="settings">Settings</string>
+    <string name="sort">Sort</string>
+    <string name="search">Search</string>
+    <string name="search_cryptocurrency">Search Cryptocurrency</string>
+    <string name="cryptocurrency">Cryptocurrency</string>
+    <string name="nft">NFT</string>
+    <string name="current_price">$%1$s USD</string>
+    <string name="price_change">%1$s%%</string>
+    <string name="no_internet">Check your internet connection and try again</string>
+    <string name="sort_by_market_cap">Sort by: Market Cap</string>
+    <string name="sort_by_price">Sort by: Price</string>
+    <string name="sort_by_volume">Sort by: 24H Volume</string>
+</resources>
