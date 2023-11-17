@@ -29,7 +29,6 @@ import coil.compose.AsyncImage
 import dev.virunarala.gweiland.R
 import dev.virunarala.gweiland.home.data.model.ListingUiModel
 import dev.virunarala.gweiland.ui.theme.EmeraldGreen
-import timber.log.Timber
 
 @Composable
 fun TopListingBanner(
@@ -55,8 +54,6 @@ fun TopListingBanner(
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
-
-                Timber.i("Logo: ${listing.logo}")
                 AsyncImage(
                     model = listing.logo,
                     placeholder = painterResource(id = R.drawable.dollar_placeholder),
